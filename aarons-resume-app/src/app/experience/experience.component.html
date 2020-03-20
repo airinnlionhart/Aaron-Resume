@@ -1,0 +1,17 @@
+<body>
+<div class="main-nav">
+        <ul class="nav">
+          <li class="name">Aaron Lenhart</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a [routerLink]="['/landingpage','']"
+>Log In</a></li>
+        </ul>
+</div>
+<h1>Job Postings</h1>
+<div class="card" *ngFor="let post of Postings">
+	<h3>{{ post.job }}</h3>
+	<p>{{ post.location }} </p>
+	<p>{{ post.description }} </p>
+	<button [routerLink]="['/apply', '']" (click)="addApply()">Apply</button>
+</div>
+</body>

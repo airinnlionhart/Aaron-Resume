@@ -1,0 +1,46 @@
+<div class="main-nav">
+        <ul class="nav">
+          <li class="name">Aaron Lenhart</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a [routerLink]="['/experience', '']">Job Postings</a></li>
+        </ul>
+    </div>
+<div class="main-body">    
+	<h2>Create a Job Posting</h2>
+	<div class="card">
+	<input #job placeholder="Enter Job Title"/><br>
+	<input #location placeholder="Location" /><br>
+	<textarea rows="4" cols="50" #description placeholder="Description" class="description" ></textarea>
+	<button (click)="addPosting(job.value,location.value,description.value);job.value=''; location.value=''; description.value='' ">Add Posting</button>
+	</div>
+    <hr>
+	<h2>Quliafied Applicants</h2>
+
+
+	<div *ngFor="let user of Users">
+		<ng-container *ngIf="user.qualified >= 2">
+				<div class="card">
+					<h3>{{user.job}}</h3>
+					<h3>{{ user.name }}</h3>
+					<p>{{ user.email }} </p>
+					<button (click)="alert()">Hire</button><button (click)="update(user.name)">Not Qualified</button>
+				</div>	
+		</ng-container>					
+	</div>
+	<hr>
+	<h2>Show All Applicants</h2>
+
+
+	<div *ngFor="let user of Users">
+		<ng-container *ngIf="user.qualified <= 1">
+				<div class="card">
+					<h3>{{user.job}}</h3>
+					<h3>{{ user.name }}</h3>
+					<p>{{ user.email }} </p>
+					<button (click)="alert()">Hire</button><button (click)="update(user.name)">Not Qualified</button>
+				</div>	
+		</ng-container>					
+	</div>
+</div>
+
+ 

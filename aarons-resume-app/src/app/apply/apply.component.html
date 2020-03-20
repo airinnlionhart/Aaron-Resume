@@ -1,0 +1,16 @@
+<div class="main-nav">
+        <ul class="nav">
+          <li class="name">Aaron Lenhart</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a [routerLink]="['/experience', '']">Job Postings</a></li>
+          <li><a [routerLink]="['/landingpage','']"
+>Log in</a></li>
+        </ul>
+    </div>
+<h2>Apply Now</h2>	
+<div class="card" *ngFor="let post of Postings">
+<h3>{{ post.job }}</h3>
+<input #name placeholder="name"/><br>
+<input #email placeholder="email" /><br>
+<button (click)="addUser(name.value,email.value,qualified, this.post.job);name.value=''; email.value=''; " [routerLink]="['/experience', '']">Apply</button>
+</div>
