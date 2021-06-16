@@ -1,4 +1,5 @@
 # AaronsResumeApp
+may have to run npm install --save-dev @angular_devkit/build-angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
