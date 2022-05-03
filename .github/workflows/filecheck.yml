@@ -20,6 +20,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: "(test -f README && echo README exist) || exit 1"
+      run: "(test -f README && echo README.md exist) || exit 1"
    
       
