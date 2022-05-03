@@ -1,5 +1,5 @@
 # AaronsResumeApp
-move to the root folder aarons-resume-app
+ move to the root folder aarons-resume-app
 
 may have to run npm install --save-dev @angular_devkit/build-angular
 

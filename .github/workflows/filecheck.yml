@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Filecheck
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -20,4 +20,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: "(test -f README && echo README exist) || echo You need to add this file"
+      if: hasFiles('README.md') != ''
+    
+   
+      
