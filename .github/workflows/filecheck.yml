@@ -20,6 +20,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: "(test -f README.md && echo README.md exist) || exit 1"
+      if: hasFiles('README.md') != ''
+    
    
       
